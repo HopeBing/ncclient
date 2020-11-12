@@ -14,10 +14,10 @@ def huawei_connect(host, port, user, password):
                            look_for_keys = False)
 
 def test_connect(host, port, user, password):
-    with huawei_connect(host, port=port, user=user, password=password) as m:
+    with huawei_connect(host=host, port=port, user=user, password=password) as m:
 
         n = m._session.id
         print("The session id is %s." % (n))
 
 if __name__ == '__main__':
-    test_connect(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    test_connect('192.168.1.253', '830', 'huawei2', 'Huawei@2020')
